@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Week 2| Semantic Elements</title>
+<!-- add our metta data-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="discription" content="this week are using semantic elements">
+    <meta name="robots" content="index, nofollow">
+    <meta charset="utf-8">
+</head>
+<body>
+<!--the header element is often the first semantic element that we will use-->
+<header>
+    <!--this would be my logo container-->
+    <div>
+        <p>this is a logo</p>
+    </div>
+    <!--site navigation-->
+    <nav>
+        <menu>
+            <li><a href="index.html" target="_blank">New Tab</a></li>
+            <li><a href="index.html" target="_self">Same Tab</a></li>
+        </menu>
+    </nav>
+</header>
+<!-- I am going to use a section element to define my row of content-->
+<section>
+    <h1>I am he main heading element</h1>
+    <h2>I am a sub-heading</h2>
+</section>
+<!-- this element is the parent container for all the content unique to this page-->
+<main>
+    <section>
+        <h3> I am this section title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem iure magni neque nesciunt nostrum officiis
+            omnis pariatur, quod repellat <mark>reprehenderit repudiandae sed similique</mark> voluptatibus voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusamus ducimus id, odio pariatur ut voluptas.</p>
+    </section>
+    <!--add another row to contain our form-->
+    <section>
+        <form action="somephpfile.php" method="POST" enctype="multipart/form-data">
+            <lable>Your Name (Required)</lable>
+            <br>
+            <input type="text" name="name" required>
+            <br>
+            <p><input type="email" required placeholder="email (reqired)"></p>
+            <lable>Password</lable>
+            <br>
+            <input type="password" name="password" required>
+            <br>
+            <lable> pick one: </lable>
+            <br>
+            <input type="radio" id="html" name="fav_lang" value="html">
+            <lable for="html">HTML</lable>
+            <br>
+            <input type="radio" id="css" name="fav_lang" value="css">
+            <lable for="css">CSS</lable>
+            <br>
+            <lable>Check all that apply:</lable>
+            <br>
+            <input type="checkbox" id="choice1" name="choice1" value="Choice 1">
+            <lable for="choice1">choice 1 </lable>
+            <br>
+            <input type="checkbox" id="choice1" name="choice2" value="Choice 1">
+            <lable for="choice2">choice 2</lable>
+            <br>
+            <lable>pick a number between 1 and 10</lable>
+            <br>
+            <input type="number" min="1" max="10">
+            <br>
+            <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="(123) 123-1234">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</main>
+<aside>
+    <!--try to picture this as a sidebar found on the right side of the page-->
+    <article>
+        <h4>Article Title</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur cumque debitis,
+            delectus dolore dolorem est facilis fugiat hic maiores mollitia odio optio quam veritatis.</p>
+    </article>
+</aside>
+<footer>
+    <h4> I am a footer ... nothing to see here </h4>
+</footer>
+</body>
+</html>
