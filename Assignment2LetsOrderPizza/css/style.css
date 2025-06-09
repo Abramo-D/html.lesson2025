@@ -1,0 +1,262 @@
+/* this is makes the styling go right to the edge dont mess with this*/
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+}
+/*this will have the links scroll down smoothly you dont need to touch  */
+html {
+    scroll-behavior: smooth;
+}
+/*this is the font for the headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+/*Secondary fonts*/
+p, a, li, ul, figcaption {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Header styling no need to touch this  */
+.header-content > * {
+    position: relative;
+    z-index: 2;
+}
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40vh;
+    background-color: rgba(51, 11, 11, 0.94);
+    position: relative;
+    color: #b8b5b5;
+}
+.header-content h1 {
+    font-size: 100px;
+    color: white;
+    margin: 0;
+}
+.header-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.79);
+}
+.header-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6vh;
+    background-color: rgba(255, 255, 255, 0.66);
+}
+.abramo-logo {
+    width: 50%;
+    height: auto;
+}
+/* Navigation menu positioning */
+header nav .menu {
+    display: flex;
+    list-style: none;
+    padding-left: 5px;
+    margin: 150px 20px -90px;
+    gap: 20px;
+}
+.menu li a {
+    color: #ccc9c9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/*This block is for the thin black lines do not touch */
+main > h2,
+section h2 {
+    position: relative;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin: 40px 0 20px 0;
+    z-index: 1;
+}
+main > h2::before,
+main > h2::after,
+section h2::before,
+section h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: black;
+}
+main > h2::before,
+section h2::before {
+    left: 0;
+}
+main > h2::after,
+section h2::after {
+    right: 0;
+}
+
+/* this keeps the posters to scale and side by side
+you can change the images on the HTML page do not touch*/
+.specials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.specials div {
+    flex: 1;
+    text-align: start;
+}
+.specials img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Form Styling no need to adjust */
+section form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(66, 64, 64, 0.49);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.special-instructions {
+    width: auto;  /* Takes full width of the container */
+    height: 100px;  /* Fixed height */
+    overflow-y: scroll;  /* Vertical scrollbar appears when content exceeds height */
+    resize: none;  /* Disable resizing by the user */
+    padding: 10px;  /* Add some padding inside the box */
+    font-size: 14px;  /* Font size for better readability */
+    border: 1px solid #ccc;  /* Light border around the textarea */
+    border-radius: 5px;  /* Rounded corners for the textarea */
+}
+section form input,
+section form label {
+    display: block;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+section form input[type="radio"],
+section form input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+}
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.radio-group label,
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/* Submit Button */
+section form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #330b0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+section form input[type="submit"]:hover {
+    background-color: #521e1e;
+}
+
+
+/* this is the second row, the video form and then the next video*/
+.secondRow {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+
+}
+.videoLeft video {
+    width: 500px;          /* narrow width */
+    height: 800px;         /* tall height */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.videoRight video {
+    width: 500px;          /* narrow width */
+    height: 800px;         /* tall height */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/*now we are at the bottom of the page */
+.lowerBanner{
+    width: 100%;      /* Adjust width */
+    height: auto;     /* Maintains aspect ratio */
+    margin: 0;
+    display: inline-block;
+}
+/*this is where the location button adjustments are,
+it may need to be adjusted if the images move over all it should be fine */
+.lowerBannerButton {
+    position: absolute;
+    top: 45%;                           /* adjust button position if you decide to change the image  */
+    left: 23%;
+    transform: translate(40px, 1740px);
+
+    padding: 30px 70px;
+    font-size: 40px;
+    background-color: #ff4d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.lowerBannerButton:hover {
+    opacity: 1;
+}
+
+/* this is the black area at the end of the page you can change the lorem in the Html section*/
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40vh;
+    background-color: rgb(2, 1, 1);
+    position: relative;
+    color: #b8b5b5;
+}
+.footer ul {
+    list-style-type: none;  /* Removes the dots */
+    padding: 0;             /* Removes default padding */
+}

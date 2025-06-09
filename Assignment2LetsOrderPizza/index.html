@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!--meta data-->
+  <title>Abramo's Pizza | Your Pizza, Your way</title>
+  <meta charset="UTF-8">
+  <meta name ="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Abramo's Pizza. Your Pizza Your Way order your pizza now 30-minute guarantee " >
+  <meta name="robots"  content="noindex, nofollow">
+   <!-- Google fonts Poppins and Roboto -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <!-- add our CSS -->
+   <link rel="stylesheet" href="./css/style.css">
+ </head>
+
+
+ <!-- main body of the site this  is where you can make changes to update the menu and such -->
+ <body>
+ <header>
+
+     <section class="header-content">
+         <div>
+             <!-- this is where you can change the logo if you want -->
+             <a href="index.html">
+                 <img src="./img/littleAbramo-small.png" alt="logo" class="abramo-logo">
+             </a>
+         </div>
+
+         <div>
+             <h1>Abramo's Pizza</h1>
+         </div>
+
+         <!-- site navigation we can add more links as the site grows
+         for now this navigates the page just fine-->
+         <nav>
+             <ul class="menu">
+                 <li><a href="index.html" target="_top">Home</a></li>
+                 <li><a href="#order" target="_self">Order Here </a></li>
+                 <li><a href="#location" target="_parent">Location</a></li>
+             </ul>
+         </nav>
+
+     </section>
+ </header>
+
+ <!--parent container for page-->
+ <main>
+     <!--FIRST ROW  CHANGE THE BANNER AND THE DEALS BELOW -->
+     <h2>HOT AND READY DEALS</h2>
+
+     <!-- v--CHANGE THE ADVERT IMAGES HERE--v -->
+         <section class="specials">
+     <div>
+         <img src="img/focatiaPizzaPoster.png" alt="A poster for focatia pizza featuring delicious toppings and a crispy crust">
+         <!-- THIS IS WHERE YOU CHANGE SPECIAL ONE-->
+     </div>
+             <!-- THIS IS WHERE YOU CHANGE SPECIAL TWO-->
+       <div>
+           <img src="img/focacctiaSpecial.png" alt="A poster for yhe slice special " />
+       </div>
+   </section>
+
+         <h2 id="order">  PLEASE ORDER HERE </h2>
+
+
+   <!--SECOND ROW  --PIZZA ORDER FORM--  -->
+
+     <!-- this is where you can change the video adds this is the left video -->
+             <section class="secondRow">
+                 <div class="videoLeft">
+         <video loop autoplay muted>
+             <source src="./video/pizzaPanningShot.mp4" type="video/mp4">
+             video unavailable please check browser compatibility with mp4
+         </video>
+         </div>
+
+                 <!-- this is the customer information section -->
+             <form action="orderform.php" method="post" enctype="multipart/form-data">
+                 <div class="form-group">
+                     <input type="text" name="FNLN" placeholder="Name (First Last) *" required>
+                 </div>
+
+                 <div class="form-group">
+                     <input type="email" name="email" placeholder="Email Address *" required>
+                 </div>
+                 <div class="form-group">
+                     <input type="tel" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890 *" required>
+                 </div>
+
+                 <!--this is just the pizza size options this should
+                 always remain the same no need to adjust -->
+
+                 <label>Choose your size</label>
+                 <div class="radio-group">
+                     <label><input type="radio" name="size" value="Small"> Small</label>
+                     <label><input type="radio" name="size" value="Medium"> Medium</label>
+                     <label><input type="radio" name="size" value="Large"> Large</label>
+                     <label><input type="radio" name="size" value="Party"> Party Size</label>
+                 </div>
+
+
+                 <!-- here you can change the toppings is your form if the options change  -->
+                 <label>Choose Your Toppings</label>
+                 <div class="checkbox-group">
+                     <label><input type="checkbox" name="toppings[]" value="Pepperoni"> Pepperoni</label>
+                     <label><input type="checkbox" name="toppings[]" value="Mushrooms"> Mushrooms</label>
+                     <label><input type="checkbox" name="toppings[]" value="Olives"> Olives</label>
+                     <label><input type="checkbox" name="toppings[]" value="Pineapple"> Pineapple</label>
+                 </div>
+
+                 <!-- this is where the customer can decide how many pizzas they want -->
+
+                 <div class="form-group">
+                     <label>Quantity of Pizzas</label>
+                     <input type="number" name="quantity" min="1" max="5" step="1" value="1">
+                 </div>
+
+                 <!-- this is the special instruction filed for the customer to fill out -->
+                 <div class="special-instructions">
+                     <label  for="special_instructions">Special Instructions:</label>
+                     <textarea id="special_instructions" name="special_instructions"
+                               rows="4" cols="50" placeholder="Enter any special instructions here..."></textarea>
+                 </div>
+
+                 <!-- button for the customer to submit when they are done -->
+
+                 <div class="form-group">
+                     <input type="submit" value="Submit">
+                 </div>
+             </form>
+
+
+                 <!-- this is where you can change the video adds this is the right video -->
+
+         <div class="videoRight">
+         <video loop autoplay muted>
+             <source src="./video/pizzaGettingSliced.mp4" type="video/mp4">
+             video unavailable please check browser compatibility with mp4
+         </video>
+         </div>
+     </section>
+
+     <section>
+         <h2 id="location"> THANK YOU  </h2>
+     </section>
+
+     <section>
+         <div>
+             <img src="./img/pizzaLowerBanner.png" alt="Lower Banner" class="lowerBanner">
+
+             <!-- here you can change the link to the store location,
+             be carful not to delete ( href= ) and make sure you put the new link in quotes "like this"  -->
+
+             <button class="lowerBannerButton" onclick="window.location.href='https://www.google.com/maps/place/Dorios+Kettleby+Italian+Bakery/@44.0080539,-79.5648523,17z/data=!3m1!4b1!4m6!3m5!1s0x882ada08fb13fc19:0xe9634ed4cfba18d5!8m2!3d44.0080539!4d-79.5648523!16s%2Fg%2F1tdv_hzq?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D'">
+                 Find a location
+             </button>
+         </div>
+     </section>
+
+     <section>
+         <h2> CONTACT INFO </h2>
+     </section>
+ </main>
+
+
+<!-- change the contact information here each dive is a row in the footer -->
+ <footer>
+ <SECTION class="footer">
+     <div class="footer ul">
+         <ul>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+         </ul>
+     </div>
+     <div class="footer ul">
+         <ul>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+         </ul>
+     </div>
+     <div class="footer ul">
+         <ul>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+         </ul>
+     </div>
+     <div class="footer ul">
+         <ul>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+         </ul>
+     </div>
+     <div class="footer ul">
+         <ul>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+             <li>Lorem ipsum dolor.</li>
+         </ul>
+     </div>
+
+
+ </SECTION>
+ </footer>
+
+
+
+
+</body>
+</html>
