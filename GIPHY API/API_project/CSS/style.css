@@ -1,0 +1,232 @@
+:root {
+  --secondary: rgba(2, 47, 64, 0.78);
+  --accent: #046E8F;
+  --text: #3cbada;
+  --primary: #0090C1;
+  --base: rgba(188, 215, 248, 0.91);
+  --gifBackground: rgb(0, 0, 0);
+  --font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("imgs/GIF_API_BG.png");
+  font-family: var(--font-family);
+  color: var(--base);
+  line-height: 1.5;
+  background-size: cover;         
+  background-repeat: no-repeat;   
+  background-position: center; 
+  
+}
+
+/*this makes the main box that holds the conent*/
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and Nav */
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li a {
+  color: var(--gifBackground);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+ 
+  
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--base);
+  text-transform: capitalize;
+  background-color: var(--accent);
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--base);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Trending Section */
+
+#trending {
+  background-color: var(--secondary);
+  
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Search Section */
+
+#serch {
+  background-color: var(--gifBackground);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* Gif Display Grid */
+
+#gifDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  background-color: var(--gifBackground);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.gif-image {
+  width: clamp(120px, 10vw, 150px);
+  height: clamp(120px, 10vh, 150px);
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--gifBackground);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--secondary);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--base);
+  margin-top: 2rem;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/*serch form style*/
+ .search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid var(--accent);
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+    background-color: var(--gifBackground);
+    color: var(--base);
+}
+
+.search-form input[type="text"]::placeholder {
+    color: var(--base);
+    opacity: 0.7;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: var(--primary);
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    border: none;
+    color: var(--base);
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: var(--primary);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 8px 16px;
+    background-color: var(--accent);
+    color: var(--base);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: var(--primary);
+}
+
+.pagination span {
+    font-weight: bold;
+    color: var(--base);
+}
+
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
