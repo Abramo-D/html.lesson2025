@@ -30,7 +30,7 @@ body {
   line-height: 1.5;
 }
 
-/*this makes the main box that holds the conent*/
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -236,3 +236,4 @@ footer h2 {
     gap: 1rem;
   }
 }
+
